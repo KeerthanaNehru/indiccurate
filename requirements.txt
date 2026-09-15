@@ -1,0 +1,42 @@
+# IndicCurate — pinned dependencies.
+# This file grows phase by phase; versions are frozen from a working venv (Python 3.13)
+# after each phase is verified, via `pip freeze`.
+
+# ---- Core Build Dependencies ----
+setuptools>=70.0.0
+wheel
+
+# ---- Phase 1: Ingestion ----
+datasets==5.0.1
+huggingface_hub==1.30.0
+Scrapy==2.18.0
+pandas==2.2.3
+pyarrow==25.0.1
+python-dotenv==1.2.3
+requests==2.34.2
+tqdm==4.70.0
+mutagen==1.48.1
+fsspec==2026.6.0
+aiohttp==3.14.3
+
+# ---- Phase 2: Filtering ----
+fasttext==0.9.3
+
+# ---- Phase 3: Deduplication ----
+datasketch==2.0.0
+faiss-cpu==1.15.0
+sentence-transformers==6.0.1
+torch==2.14.0
+
+# ---- Phase 5: Synthetic Data Generation ----
+groq==0.12.0
+
+# ---- Phase 6: Speech QA ----
+librosa==0.10.2
+# Note: openai-whisper has Python 3.13 compatibility issues
+# For Phase 6 functionality, use: pip install git+https://github.com/openai/whisper.git
+# Or use: conda install -c conda-forge openai-whisper (pre-built wheel)
+jiwer==3.1.0
+
+# ---- Phase 7: Annotation Dashboard ----
+streamlit==1.41.1

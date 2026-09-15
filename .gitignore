@@ -1,0 +1,116 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+.env
+.env.local
+.env.*.local
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.cursor/
+*.code-workspace
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data Files (Large)
+data/raw/**/*.wav
+data/raw/**/*.mp3
+data/raw/**/*.flac
+data/raw/**/*.parquet
+data/processed/**/*.parquet
+data/processed/**/*.jsonl
+data/processed/**/*.json
+
+# Logs
+*.log
+logs/
+*.log.*
+audio_processing.log
+
+# Cache
+.cache/
+*.cache
+.streamlit/
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+.tmp/
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Poetry
+poetry.lock
+
+# Pip
+requirements.lock
+
+# Package managers
+package-lock.json
+yarn.lock
+
+# Build artifacts
+*.whl
+*.tar.gz
+
+# Test coverage
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Keep important directories but exclude their large files
+!data/
+!data/raw/
+!data/processed/
+!data/synthetic/
+!data/speech_qa/
+# Large files and caches (GitHub limits 100MB per file)
+venv_packages/
+.hf_cache/
+models/
+.cache/
+# Large files and caches (GitHub limits 100MB per file)
+venv_packages/
+.hf_cache/
+models/
+.cache/

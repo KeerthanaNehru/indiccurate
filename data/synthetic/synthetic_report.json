@@ -1,0 +1,11 @@
+{
+  "corpus_size": 2776,
+  "topics_extracted": 20,
+  "qa_pairs_generated": 3,
+  "qa_pairs_validated": 3,
+  "validation_rate": 100.0,
+  "generation_model": "qwen/qwen3.8-27b",
+  "validation_model": "qwen/qwen3.8-27b",
+  "validation_threshold": 3.0,
+  "notes": "Demo run with simulated LLM outputs due to free-tier token limits. In production, upgrade Groq tier for higher limits."
+}

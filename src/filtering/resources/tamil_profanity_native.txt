@@ -1,0 +1,71 @@
+# Source: Uli Slur List (tattle-made/Uli), https://github.com/tattle-made/Uli
+# License: Open Database License (ODbL) — https://opendatacommons.org/licenses/odbl/
+# Crowdsourced by gender-rights researchers/activists; includes vulgar terms
+# and identity-based/gendered slurs used to target marginalized groups.
+# Filtered here to native Tamil-script entries only (59 of 508 total entries).
+#
+# 4 entries were dropped after a smoke test on real corpus data showed they
+# are overwhelmingly ordinary dictionary words with a benign primary sense,
+# causing heavy false-positive flagging with no context disambiguation:
+#   அத்தை  ("aunt")           — 18 false-positive matches in a 3k-doc sample
+#   அலி    ("Ali", a name)     — 70 matches (also used as a slur *in context*)
+#   ஒன்பது ("nine")           — 98 matches
+#   கோழி   ("chicken")        — 28 matches
+# This is a known limitation of simple substring/token wordlist filtering —
+# see dataset_card.md. A production system would need a context-aware
+# classifier instead of a static list for these ambiguous terms.
+அயிட்டம்
+அரவாணி
+ஆட்டக்காரி
+ஆப்ப மாமி
+ஆம்புள கள்ளன்
+உங்கம்மாவை ஓக்க
+ஊம்பு
+ஊர் மேய்றது
+ஐட்டம்
+ஓக்க
+ஓத்த
+கம்பு துண்டு
+கல்லு
+குஜ்ஜிலீஸ்
+குரும்ப
+கூதி
+கொம்மா
+கோத்தா
+க்ரோஸ்ஸி
+ங்கோத்தா
+சாமான்
+சூத்தடி
+சூத்து
+டிகி
+தாயோளி
+திருட்டு_பள்ளன்
+தேவடியா பசங்களா
+தேவடியா மவன்
+தேவிடியா புண்ட
+தேவிடியாளுக்கு பொறந்தவன்
+தேவ்டியா
+தேவ்டியா பையா
+நடத்தை கெட்டது
+பறத்தாயோலி
+பாலியல்_ஜல்சா_கட்சி
+பின்துவாரி
+புண்ட
+புண்டை
+புண்டை சைடு
+பெரியாராவது_மயிராவது
+பொடியன் மாஸ்டர்
+பொட்டை
+பொட்டை நாய்
+பொதுச் சொத்து
+பொன்ஸ்
+பொம்பள பொருக்கி
+மாங்கா
+முட்டாஉபி
+முலை
+லூசு
+லூசு கூ
+லெஸ்பியன்
+வாயில பூல விடுவேன்
+வேச
+வேசை

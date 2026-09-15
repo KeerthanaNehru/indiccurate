@@ -1,0 +1,97 @@
+{
+  "speakers": [
+    {
+      "speaker_id": "speaker_0",
+      "count": 8,
+      "duration_seconds": 38.4,
+      "avg_snr_db": 22,
+      "gender": "M"
+    },
+    {
+      "speaker_id": "speaker_1",
+      "count": 8,
+      "duration_seconds": 38.4,
+      "avg_snr_db": 23,
+      "gender": "M"
+    },
+    {
+      "speaker_id": "speaker_2",
+      "count": 8,
+      "duration_seconds": 38.4,
+      "avg_snr_db": 24,
+      "gender": "M"
+    },
+    {
+      "speaker_id": "speaker_3",
+      "count": 8,
+      "duration_seconds": 38.4,
+      "avg_snr_db": 25,
+      "gender": "M"
+    },
+    {
+      "speaker_id": "speaker_4",
+      "count": 8,
+      "duration_seconds": 38.4,
+      "avg_snr_db": 26,
+      "gender": "M"
+    },
+    {
+      "speaker_id": "speaker_5",
+      "count": 8,
+      "duration_seconds": 38.4,
+      "avg_snr_db": 22,
+      "gender": "M"
+    },
+    {
+      "speaker_id": "speaker_6",
+      "count": 8,
+      "duration_seconds": 38.4,
+      "avg_snr_db": 23,
+      "gender": "F"
+    },
+    {
+      "speaker_id": "speaker_7",
+      "count": 8,
+      "duration_seconds": 38.4,
+      "avg_snr_db": 24,
+      "gender": "F"
+    },
+    {
+      "speaker_id": "speaker_8",
+      "count": 8,
+      "duration_seconds": 38.4,
+      "avg_snr_db": 25,
+      "gender": "F"
+    },
+    {
+      "speaker_id": "speaker_9",
+      "count": 8,
+      "duration_seconds": 38.4,
+      "avg_snr_db": 26,
+      "gender": "F"
+    },
+    {
+      "speaker_id": "speaker_10",
+      "count": 8,
+      "duration_seconds": 38.4,
+      "avg_snr_db": 22,
+      "gender": "F"
+    },
+    {
+      "speaker_id": "speaker_11",
+      "count": 8,
+      "duration_seconds": 38.4,
+      "avg_snr_db": 23,
+      "gender": "F"
+    }
+  ],
+  "summary": {
+    "total": 100,
+    "duration_hours": 0.13,
+    "avg_per_speaker": 8.3,
+    "gender_breakdown": {
+      "M": 50,
+      "F": 50
+    }
+  }
+}

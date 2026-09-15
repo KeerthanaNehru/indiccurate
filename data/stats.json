@@ -1,0 +1,255 @@
+{
+  "runs": [
+    {
+      "stage": "ingestion.hf_loader",
+      "timestamp": "2026-09-05T22:48:27.845338+00:00",
+      "input_count": 2998,
+      "output_count": 2998,
+      "removed_count": 0,
+      "extra": {
+        "wiki_dataset": "wikimedia/wikipedia:20231101.ta",
+        "wiki_count": 1498,
+        "wiki_max_docs": 1500,
+        "oscar_dataset": "AnanthZeke/oscar_tamil_2201",
+        "oscar_count": 1500,
+        "oscar_max_docs": 1500
+      }
+    },
+    {
+      "stage": "ingestion.news_spider",
+      "timestamp": "2026-09-05T22:53:27.208286+00:00",
+      "input_count": 49,
+      "output_count": 49,
+      "removed_count": 0,
+      "extra": {
+        "sitemap_url": "https://www.hindutamil.in/news_sitemap.xml",
+        "max_articles": 50,
+        "source": "scrapy:hindutamil.in"
+      }
+    },
+    {
+      "stage": "ingestion.speech_downloader",
+      "timestamp": "2026-09-05T22:53:50.529717+00:00",
+      "input_count": 100,
+      "output_count": 100,
+      "removed_count": 0,
+      "extra": {
+        "openslr_max_per_gender": 50,
+        "common_voice_max": 100,
+        "openslr_count": 100,
+        "common_voice_count": 0
+      }
+    },
+    {
+      "stage": "ingestion.combine",
+      "timestamp": "2026-09-05T22:54:09.163784+00:00",
+      "input_count": 3047,
+      "output_count": 3047,
+      "removed_count": 0,
+      "extra": {
+        "hf_text": 2998,
+        "news": 49
+      }
+    },
+    {
+      "stage": "filtering.lang_id",
+      "timestamp": "2026-09-05T23:06:53.035884+00:00",
+      "input_count": 3047,
+      "output_count": 3047,
+      "removed_count": 0,
+      "extra": {
+        "min_confidence": 0.5
+      }
+    },
+    {
+      "stage": "filtering.length",
+      "timestamp": "2026-09-05T23:06:53.038046+00:00",
+      "input_count": 3047,
+      "output_count": 3036,
+      "removed_count": 11,
+      "extra": {
+        "min_chars": 50,
+        "max_chars": 100000
+      }
+    },
+    {
+      "stage": "filtering.boilerplate",
+      "timestamp": "2026-09-05T23:06:54.094083+00:00",
+      "input_count": 3036,
+      "output_count": 3036,
+      "removed_count": 0,
+      "extra": {}
+    },
+    {
+      "stage": "filtering.pii_redaction",
+      "timestamp": "2026-09-05T23:06:55.244651+00:00",
+      "input_count": 3036,
+      "output_count": 3036,
+      "removed_count": 0,
+      "extra": {
+        "phone_redactions": 48,
+        "email_redactions": 3
+      }
+    },
+    {
+      "stage": "filtering.profanity",
+      "timestamp": "2026-09-05T23:06:55.668227+00:00",
+      "input_count": 3036,
+      "output_count": 3036,
+      "removed_count": 0,
+      "extra": {
+        "drop_profanity": false,
+        "flagged_count": 29
+      }
+    },
+    {
+      "stage": "dedup.exact",
+      "timestamp": "2026-09-05T23:16:02.188384+00:00",
+      "input_count": 3036,
+      "output_count": 2962,
+      "removed_count": 74,
+      "extra": {}
+    },
+    {
+      "stage": "dedup.minhash",
+      "timestamp": "2026-09-05T23:17:22.062025+00:00",
+      "input_count": 2962,
+      "output_count": 2915,
+      "removed_count": 47,
+      "extra": {
+        "threshold": 0.8,
+        "num_perm": 128,
+        "ngram_size": 5
+      }
+    },
+    {
+      "stage": "dedup.minhash",
+      "timestamp": "2026-09-05T23:18:28.321156+00:00",
+      "input_count": 2962,
+      "output_count": 2916,
+      "removed_count": 46,
+      "extra": {
+        "threshold": 0.8,
+        "num_perm": 128,
+        "ngram_size": 5
+      }
+    },
+    {
+      "stage": "dedup.semantic",
+      "timestamp": "2026-09-05T23:19:42.136972+00:00",
+      "input_count": 2916,
+      "output_count": 1757,
+      "removed_count": 1159,
+      "extra": {
+        "model_name": "paraphrase-multilingual-MiniLM-L12-v2",
+        "threshold": 0.92,
+        "top_k": 8
+      }
+    },
+    {
+      "stage": "dedup.exact",
+      "timestamp": "2026-09-05T23:30:27.797051+00:00",
+      "input_count": 3036,
+      "output_count": 2962,
+      "removed_count": 74,
+      "extra": {}
+    },
+    {
+      "stage": "dedup.minhash",
+      "timestamp": "2026-09-05T23:31:03.444636+00:00",
+      "input_count": 2962,
+      "output_count": 2916,
+      "removed_count": 46,
+      "extra": {
+        "threshold": 0.8,
+        "num_perm": 128,
+        "ngram_size": 5
+      }
+    },
+    {
+      "stage": "dedup.exact",
+      "timestamp": "2026-09-05T23:31:20.314413+00:00",
+      "input_count": 3036,
+      "output_count": 2962,
+      "removed_count": 74,
+      "extra": {}
+    },
+    {
+      "stage": "dedup.minhash",
+      "timestamp": "2026-09-05T23:31:56.285708+00:00",
+      "input_count": 2962,
+      "output_count": 2916,
+      "removed_count": 46,
+      "extra": {
+        "threshold": 0.8,
+        "num_perm": 128,
+        "ngram_size": 5
+      }
+    },
+    {
+      "stage": "dedup.semantic",
+      "timestamp": "2026-09-05T23:32:36.391647+00:00",
+      "input_count": 2916,
+      "output_count": 2779,
+      "removed_count": 137,
+      "extra": {
+        "model_name": "paraphrase-multilingual-MiniLM-L12-v2",
+        "threshold": 0.99,
+        "top_k": 8
+      }
+    },
+    {
+      "stage": "contamination.check",
+      "timestamp": "2026-09-05T23:37:05.821475+00:00",
+      "input_count": 2779,
+      "output_count": 2779,
+      "removed_count": 0,
+      "extra": {
+        "note": "No test sets available"
+      }
+    },
+    {
+      "stage": "contamination.check",
+      "timestamp": "2026-09-05T23:38:07.042902+00:00",
+      "input_count": 2779,
+      "output_count": 2776,
+      "removed_count": 3,
+      "extra": {
+        "corpus_size": 2779,
+        "test_set_size": 3,
+        "ngram_threshold": 0.3,
+        "semantic_threshold": 0.9,
+        "ngram_flagged": 0,
+        "semantic_flagged": 3,
+        "total_flagged": 3,
+        "contamination_rate": 0.10795250089960418
+      }
+    },
+    {
+      "stage": "ingestion.speech_downloader",
+      "timestamp": "2026-09-06T00:28:37.916035+00:00",
+      "input_count": 0,
+      "output_count": 0,
+      "removed_count": 0,
+      "extra": {
+        "openslr_max_per_gender": 50,
+        "common_voice_max": 100,
+        "openslr_count": 0,
+        "common_voice_count": 0
+      }
+    },
+    {
+      "stage": "ingestion.speech_downloader",
+      "timestamp": "2026-09-06T00:29:51.627235+00:00",
+      "input_count": 0,
+      "output_count": 0,
+      "removed_count": 0,
+      "extra": {
+        "openslr_max_per_gender": 50,
+        "common_voice_max": 100,
+        "openslr_count": 0,
+        "common_voice_count": 0
+      }
+    }
+  ]
+}

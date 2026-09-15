@@ -1,0 +1,29 @@
+{
+  "total_audio_files": 100,
+  "qa_passed": 87,
+  "qa_failed": 13,
+  "pass_rate": 0.87,
+  "metrics": {
+    "avg_snr_db": 22.5,
+    "avg_silence_ratio": 0.18,
+    "avg_duration_seconds": 5.0,
+    "snr_threshold": 15.0,
+    "silence_threshold": 0.3,
+    "low_snr_count": 0,
+    "high_silence_count": 13
+  },
+  "speaker_stats": {
+    "total_speakers": 12,
+    "total_duration_hours": 0.13,
+    "avg_clips_per_speaker": 8.3,
+    "gender_distribution": {
+      "M": 50,
+      "F": 50
+    }
+  },
+  "whisper_stats": {
+    "model": "tiny",
+    "avg_wer": 0.35,
+    "avg_confidence": 0.92
+  }
+}
